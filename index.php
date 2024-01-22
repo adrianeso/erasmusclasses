@@ -110,7 +110,15 @@
         </div>
     </div>
 
+<div>
+    <h2>new title for my proyect</h2>
 
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci a
+        liquid aperiam cum cupiditate dignissimos earum
+        ex fugit hic officia repellat. Asperiores cupiditate et expedita explicabo iusto pariatur totam unde veritatis.
+    </p>
+</div>
 
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
