@@ -1,0 +1,64 @@
+steps for work with git
+=======================
+
+1.- install git in your pc
+2.- configure git in your pc (write name and email)
+3.- add origin from repo url for connect my proyect with my repo
+4.- download all changes from repository
+5.- create branches in my project
+6.- download changes for each one branches
+7.- send changes from my pc to my repo (for each one branches)
+
+
+comands
+=======
+( we need go to my project from terminal or comand line)
+
+git init 			-> init git inside my project 
+git brach --all 		-> show me all branches (local - remotes)
+git remote add origin <url>	-> add the repo url in my project
+git add 			-> add all changes to stage work
+	example : git add -A  -> add all changes
+		  git add filename.extension  -> add the specified files
+		  
+git log 			-> show me the commits history
+
+git checkout <branchname > 		-> switch branch 		  
+
+git checkout -b <branchname >  		-> create branch and move to this		 
+		  
+		 		  
+git branch <branchname>
+
+git branch -d <branchname>
+
+
+git pull 				-> update our project in pc with the last changes in my repo
+
+git push 				-> update the repo with the changes in my pc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		  
+		  
+		  
+
+
+

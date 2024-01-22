@@ -1,0 +1,201 @@
+Comandos para trabajar con git
+
+Iniciar el repositorio
+git init
+
+Configuracion inicial de git nombre y correo
+
+git config --global user.name "NOMBRE"
+git config --global user.email "email"
+
+Colores
+git config --global color.ui true
+
+Listado de configuraciones
+git config --global --list
+
+Para listar cambios por agregar
+git status 
+
+Agregar seguimiento a todos los cambios
+git add -A
+
+Agregar descripcion del comit
+git commit -m "descripcion de los cambios"
+
+Intercambiar entre commits
+git checkout SHA
+
+Borrar commits
+git reset --soft SHA
+git reset --mixed SHA
+hit reset --hard SHA
+
+generar listado txt con los commits
+git log > NOMBRE.TXT
+
+git help
+consola de ayuda
+
+Para ver la conexion al remoto
+git remote
+
+Listar los commits existentes
+git log
+
+Conectar con el repositorio remoto
+git remote add origin url del repositorio
+
+Enviar ficheros al repositorio remoto
+git push -u origin master 
+
+Desconectar con el remoto
+git remote remove origin
+
+========================== RAMAS Y FUSIONES ================================
+
+Ramas y fusiones git
+
+Conceptos : 
+
+	Head -> es donde nos encontramos 
+
+	Rama es linea de tiempo en proyecto
+
+	Rama Master : es la rama por default
+
+Ver la rama donde estamos 
+git branch 
+
+Crear una rama
+git branch <nombre rama>
+
+git checkout <nombre-rama>  -> nos lleva a la rama elegida
+*Este comando tambien se usa para movernos entre commits
+La rama se crea desde el utlimo commit
+
+
+Borra la rama elegida
+git branch -d <nombre-rama>
+
+
+Fusionar ramas
+
+Utilidad 
+Crear un commit juntando una rama con otra
+
+1.- Situar en la rama que absorbera cambios
+
+2.- git merge <nombre-rama-absorbida>
+
+Respuestas : Fast forward / Manual Merge
+
+Fast forward fusiona automatica sin preguntar nada
+
+Manual Merge pregunta que valide los cambios
+
+Borrar una rama
+git branch -D <Nombre de la rama>
+
+Crear rama y movernos 
+git checkout  -b <nombre-rama>
+
+===========================================================
+
+Estados 
+
+Working direcotry 
+Donde trabajamos con el proyecto
+
+Stage Area
+Elegimos archivos para pasar al siguiente estado
+
+Repository 
+Es el registro de nuestro proyecto
+
+==================================
+
+Clonar proyecto 
+git clone <enlace al repo>
+
+Fusionar ramas en remoto
+absorbemos en local y subimos nuevamente
+
+
+================
+arreglar descripcion al commit
+git commit --ammend -m <"mensaje">
+
+subirlo sin problemas (forzar)
+git push -u origin mater -f
+
+Crear una tag
+
+tags comentadas
+git tag -a v1.0 -m <"mensaje">
+
+Tags ligeras
+git tag v1.0
+
+Asignar tags a otros commits
+git tag -a v1.0 -m <"mensaje"> <SHA del commit>
+
+Subir tags al remoto
+git push origin (version que queremos)
+git push origin v0.8
+
+Subir todos los tags al remoto 
+git push origin --tags
+
+================================
+
+WORKFLOWS
+
+Se usa en proyectos propios o de nuestro equipo 
+
+git merge y git fetch
+
+git fetch -> permite actualizar el repositiorio local con lo mas actual del respositorio
+
+git fetch origin/master
+
+git merge -> une los cambios de los dos respositorios , cuando hay conflicto lanza un error para la realizacion de un manual merge
+
+
+mostrar todas las ramas (ocultas)
+git brach -a
+
+Actualizar los cambios del repositorio remoto al local y se guarda en rama oculta
+git fetch origin
+
+Para bajarlos a local se usa. Esto crea un nuevo commit en nuestro repo local 
+git merge origin/master
+
+Repositorios de terceros
+
+Fork -> es una copia del repositorio original, que cuando hacemos un fork pasamos un repo al nuestro repositirio pero no podemos subir cambios al principal
+
+Fork pasa un repositiorio a otro repositorio 
+
+==================
+
+DEPLOYMENT
+
+Envio de repositorio local a repo remoto y despues al servidor Uso de SSH
+
+Procedimiento 
+
+crear llave  
+ 
+ssh-keygen
+agregar la LLAVE PUBLICA  al repositorio y al servidor 
+
+crear tambien llaves en el servidor
+
+git pull 
+es una combinacion de fetch y merge
+
+
+
+
+
